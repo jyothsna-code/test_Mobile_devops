@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FCC8831F-DB5B-45C7-8DED-2E30B9D8B187}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Cryptollet.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Cryptollet.iOS</AssemblyName>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <ProvisioningType>automatic</ProvisioningType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>Apple Distribution: Kristijan Kralj (MEEH8E5U85)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>None</MtouchLink>
+    <MtouchInterpreter>-all</MtouchInterpreter>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>Apple Distribution: Kristijan Kralj (MEEH8E5U85)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>AppStore_2020_09_13</CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\login.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\register.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\welcome.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\nice.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\security.png.imageset\4_security.png" />
+    <ImageAsset Include="Assets.xcassets\security.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ETH.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LTC.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\BTC.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ETH.png.imageset\ETH-1.pdf" />
+    <ImageAsset Include="Assets.xcassets\LTC.png.imageset\LTC-1.pdf" />
+    <ImageAsset Include="Assets.xcassets\BTC.png.imageset\BTC-1.pdf" />
+    <ImageAsset Include="Assets.xcassets\withdrawn.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\withdrawn.png.imageset\withdrawn.pdf" />
+    <ImageAsset Include="Assets.xcassets\deposited.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\deposited.png.imageset\deposited.pdf" />
+    <ImageAsset Include="Assets.xcassets\BCH.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\DASH.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\DASH.png.imageset\DASH.pdf" />
+    <ImageAsset Include="Assets.xcassets\EOS.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\EOS.png.imageset\EOS.pdf" />
+    <ImageAsset Include="Assets.xcassets\emptyview.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\emptyview.png.imageset\emptyview.pdf" />
+    <ImageAsset Include="Assets.xcassets\welcome.png.imageset\welcome.pdf" />
+    <ImageAsset Include="Assets.xcassets\nice.png.imageset\nice.pdf" />
+    <ImageAsset Include="Assets.xcassets\register.png.imageset\register.pdf" />
+    <ImageAsset Include="Assets.xcassets\login.png.imageset\login.pdf" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%402x-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%402x-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-83.5x83.5%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ItunesArtwork%402x.png" />
+    <ImageAsset Include="Assets.xcassets\XRP.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\XRP.png.imageset\XRP.pdf" />
+    <ImageAsset Include="Assets.xcassets\XMR.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\XMR.png.imageset\MONERO.pdf" />
+    <ImageAsset Include="Assets.xcassets\grow.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\grow.png.imageset\grow.pdf" />
+    <ImageAsset Include="Assets.xcassets\all_tab.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\all_tab.png.imageset\all_tab.pdf" />
+    <ImageAsset Include="Assets.xcassets\deposited_tab.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\deposited_tab.png.imageset\deposited_tab.pdf" />
+    <ImageAsset Include="Assets.xcassets\withdrawn_tab.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\withdrawn_tab.png.imageset\withdrawn_tab.pdf" />
+    <ImageAsset Include="Assets.xcassets\XLM.png.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\XLM.png.imageset\XLM.pdf" />
+    <ImageAsset Include="Assets.xcassets\BCH.png.imageset\BCH-1.pdf" />
+    <ImageAsset Include="Assets.xcassets\splash_icon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\splash_icon.imageset\cryptollet_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1931" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Microcharts.Forms">
+      <Version>0.9.5.9</Version>
+    </PackageReference>
+    <PackageReference Include="Microcharts">
+      <Version>0.9.5.9</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Cryptollet\Cryptollet.csproj">
+      <Project>{0B0AFA83-FE7A-4D3F-A343-7223FA0DE190}</Project>
+      <Name>Cryptollet</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\3_social.png.imageset\" />
+    <Folder Include="Assets.xcassets\login.png.imageset\" />
+    <Folder Include="Assets.xcassets\register.png.imageset\" />
+    <Folder Include="Assets.xcassets\loginLoading.gif.imageset\" />
+    <Folder Include="Assets.xcassets\welcome.png.imageset\" />
+    <Folder Include="Assets.xcassets\nice.png.imageset\" />
+    <Folder Include="Assets.xcassets\security.png.imageset\" />
+    <Folder Include="Assets.xcassets\ETH.png.imageset\" />
+    <Folder Include="Assets.xcassets\LTC.png.imageset\" />
+    <Folder Include="Assets.xcassets\BTC.png.imageset\" />
+    <Folder Include="Assets.xcassets\withdrawn.png.imageset\" />
+    <Folder Include="Assets.xcassets\deposited.png.imageset\" />
+    <Folder Include="Assets.xcassets\BCH.png.imageset\" />
+    <Folder Include="Assets.xcassets\DASH.png.imageset\" />
+    <Folder Include="Assets.xcassets\EOS.png.imageset\" />
+    <Folder Include="Assets.xcassets\emptyview.png.imageset\" />
+    <Folder Include="Assets.xcassets\XRP.png.imageset\" />
+    <Folder Include="Assets.xcassets\XMR.png.imageset\" />
+    <Folder Include="Assets.xcassets\grow.png.imageset\" />
+    <Folder Include="Assets.xcassets\all_tab.png.imageset\" />
+    <Folder Include="Assets.xcassets\deposited_tab.png.imageset\" />
+    <Folder Include="Assets.xcassets\withdrawn_tab.png.imageset\" />
+    <Folder Include="Assets.xcassets\XLM.png.imageset\" />
+    <Folder Include="Assets.xcassets\splash_icon.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\loading.gif" />
+  </ItemGroup>
+</Project>

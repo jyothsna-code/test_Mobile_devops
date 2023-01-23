@@ -1,0 +1,82 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1931" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Autofac" Version="6.1.0" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
+    <PackageReference Include="Microcharts.Forms" Version="0.9.5.9" />
+    <PackageReference Include="Microcharts" Version="0.9.5.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Application\" />
+    <Folder Include="Common\" />
+    <Folder Include="Modules\" />
+    <Folder Include="Modules\Onboarding\" />
+    <Folder Include="Common\Navigation\" />
+    <Folder Include="Common\Base\" />
+    <Folder Include="Common\Models\" />
+    <Folder Include="Modules\Login\" />
+    <Folder Include="Common\Extensions\" />
+    <Folder Include="Modules\Register\" />
+    <Folder Include="Modules\Wallet\" />
+    <Folder Include="Common\Database\" />
+    <Folder Include="Common\Validation\" />
+    <Folder Include="Common\Converters\" />
+    <Folder Include="Common\Security\" />
+    <Folder Include="Common\Dialog\" />
+    <Folder Include="Common\Styles\" />
+    <Folder Include="Modules\Assets\" />
+    <Folder Include="Modules\Transactions\" />
+    <Folder Include="Modules\AddTransaction\" />
+    <Folder Include="Common\Network\" />
+    <Folder Include="Common\Controllers\" />
+    <Folder Include="Modules\Loading\" />
+    <Folder Include="Common\Controls\" />
+    <Folder Include="Common\Settings\" />
+    <Folder Include="Common\Database\Migrations\" />
+    <Folder Include="Common\Localization\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Common\Navigation\RegisterView.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Common\Localization\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Common\Localization\Resources.hr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.hr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="Common\Localization\Resources.hr-HR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.hr-HR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources.hr" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Common\Localization\Resources.hr.Designer.cs">
+      <DependentUpon>Resources.hr.resx</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Common\Localization\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Common\Localization\Resources.hr-HR.Designer.cs">
+      <DependentUpon>Resources.hr-HR.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
